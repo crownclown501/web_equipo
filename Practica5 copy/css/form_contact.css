@@ -1,0 +1,121 @@
+body {
+    height: 100vh;
+    background: radial-gradient(rgba(98, 86, 8, 0.664), #351b1b);
+    overflow: hidden;
+    position: relative;
+}
+
+.snow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+    opacity: 0.2;
+    animation: fall 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snow:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.snow:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.snow:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.snow:nth-child(4) {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.snow:nth-child(5) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+h1 {
+    color: blue;
+    font-size: 3rem;
+}
+
+.formulario-contacto {
+    padding: 3rem;
+    background-color: rgba(28, 31, 43, 0.5);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.formulario-contacto::after,
+.formulario-contacto::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(to bottom, red, rgb(128, 111, 0), rgb(144, 0, 255), rgb(0, 255, 102));
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+
+.formulario-contacto::after {
+    left: 100%;
+    margin-left: -20px;
+}
+
+.formulario-contacto::before {
+    left: 0;
+    filter: blur(2rem);
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    from {
+        transform: translateX(0);
+        
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    flex: 1;
+}

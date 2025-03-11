@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header {
+    background-color: #4781be; 
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+nav a:hover {
+    color: #ffc107 !important; 
+}
+
+.navegacion {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    background-color: #06c7ea;
+    animation: desplazamiento .5s ease-in-out;
+    display: none; 
+}
+
+
+.navegacion a {
+    display: block;
+    font-size: 1rem;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ajustes de imagen */
+@media(max-width: 768px) {
+    .card-img-top {
+        height: 200px; 
+        object-fit: cover; 
+    }
+}
+
+@media(min-width: 768px) {
+    .card-img-top {
+        height: 300px; 
+        object-fit: cover; 
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #ff5733; 
+    padding-top: .2rem;
+}
+
+.carousel-indicators {
+    position: relative;
+}
+
+/* Estilos para el formulario de registro */
+.registro {
+    background-color: #d4eedd !important;
+}
+
+.registro .btn {
+    width: 100%;
+}
